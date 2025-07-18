@@ -5,7 +5,11 @@ export default function Main() {
 
   return (
     <main>
-      <input type="text" value={famousWorks} />
+      <input
+        type="text"
+        value={famousWorks}
+        onChange={(e) => setsfamousWorks(e.target.value)}
+      />
     </main>
   );
 }
