@@ -1,37 +1,59 @@
 import { useState } from "react";
 
 export default function Main() {
-  // const [famousWorks, setsfamousWorks] = useState(" Infinity Mirror Room");
-
   const artWorks = [
-    "Infinity Mirror Room",
-    "Narcissus Garden",
-    "Dots Obsession",
-    "Pumpkin (various dates)",
-    "The Obliteration Room (2002-present)",
-    "Infinity Nets",
-    "Aggregation: One Thousand Boats Show (1963)",
-    "The Obliteration Room (2002-present)",
-    "Kusama's Self-Obliteration (1967)",
-    "Accumulation",
+    {
+      id: 1,
+      title: "Infinity Mirror Room",
+    },
+    {
+      id: 2,
+      title: "Narcissus Garden",
+    },
+    {
+      id: 3,
+      title: "Dots Obsession",
+    },
+    {
+      id: 4,
+      title: "Pumpkin",
+    },
+    {
+      id: 5,
+      title: "The Obliteration Room",
+    },
+    {
+      id: 6,
+      title: "Infinity Nets",
+    },
+    {
+      id: 7,
+      title: "Aggregation: One Thousand Boats Show",
+    },
+    {
+      id: 8,
+      title: "Kusama's Self-Obliteration",
+    },
+    {
+      id: 9,
+      title: "Accumulation",
+    },
+    {
+      id: 10,
+      title: "The Obliteration Room",
+    },
   ];
 
-  // const [famousWorks, setsfamousWorks] = useState(" ");
-  // const [artWorks, setArtWorks] = useState(initila_tasks);
+  //const [artWorks, setArtWorks] = useState("Infinity Mirror Room");
 
   return (
     <main>
-      {/* <input
-        type="text"
-        value={famousWorks}
-        onChange={(e) => setsfamousWorks(e.target.value)}
-      /> */}
       <div className="container">
         <ul className="list-group">
           {artWorks.map((artwork, index) => {
             return (
-              <li key={index} className="list-group-item">
-                {artwork}
+              <li key={artWorks.title} className="list-group-item">
+                {artwork.title}
               </li>
             );
           })}
