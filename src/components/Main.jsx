@@ -1,46 +1,70 @@
 import { useState } from "react";
+import ArtworkCard from "./ArtworkCard";
 
 export default function Main() {
   const artWorks = [
     {
       id: 1,
+      src: "https://localhost:3000",
       title: "Infinity Mirror Room",
+      date: 1965,
+      location: "Hirshhorn Museum and Sculpture Garden, Washington, D.C.",
     },
     {
       id: 2,
-      title: "Narcissus Garden",
+      src: "../img",
+      title: "Dots Obsession",
+      date: 1968,
+      location: "Various",
     },
     {
       id: 3,
-      title: "Dots Obsession",
+      src: "",
+      title: "The Obliteration Room ",
+      date: 2002,
+      location: "Various",
     },
     {
       id: 4,
-      title: "Pumpkin",
+      src: "",
+      title: "My Eternal Soul",
+      date: 2009,
+      location: "Various",
     },
     {
       id: 5,
-      title: "The Obliteration Room",
+      src: "",
+      title: "Infinity Nets",
+      date: 2007,
+      location: "Various",
     },
     {
       id: 6,
-      title: "Infinity Nets",
+      src: "",
+      title: "Ascension of Polka Dots ",
+      date: 2009,
+      location: "Various",
     },
     {
       id: 7,
-      title: "Aggregation: One Thousand Boats Show",
+      src: "",
+      title: "All the Eternal Love I Have for the Pumpkins",
+      date: 2016,
+      location: "Various",
     },
     {
       id: 8,
-      title: "Kusama's Self-Obliteration",
+      src: "",
+      title: "Repetitive Vision",
+      date: 1996,
+      location: "Various",
     },
     {
       id: 9,
-      title: "Accumulation",
-    },
-    {
-      id: 10,
-      title: "The Obliteration Room",
+      src: "",
+      title: "The Passing Winter ",
+      date: 2005,
+      location: "Various",
     },
   ];
 
@@ -48,16 +72,22 @@ export default function Main() {
 
   return (
     <main>
-      <div className="container">
-        <ul className="list-group">
-          {artWorks.map((artwork, index) => {
+      <div className="p-5 mb-4-bg-light rounded-0">
+        <div className="container-fluid py-5">
+          <h1 className="display-5 fw-bold">
+            The Most Famous Artworks of Yayoi Kusama
+          </h1>
+        </div>
+
+        {/*List of artworks*/}
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+          {artWorks.map(({ id, title, date, location }) => {
             return (
-              <li key={artWorks.title} className="list-group-item">
-                {artwork.title}
-              </li>
+              <ArtworkCard title={title} date={date} location={location} />
             );
           })}
-        </ul>
+        </div>
+        <div></div>
       </div>
     </main>
   );
