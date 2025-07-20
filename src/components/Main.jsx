@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ArtworkCard from "./ArtworkCard";
+import InputTitle from "./InputTitle";
 
 export default function Main() {
   const artWorks = [
@@ -68,8 +69,6 @@ export default function Main() {
     },
   ];
 
-  //const [artWorks, setArtWorks] = useState("Infinity Mirror Room");
-
   return (
     <main>
       <div className="p-5 mb-4-bg-light rounded-0">
@@ -87,7 +86,6 @@ export default function Main() {
             );
           })}
         </div>
-        <div></div>
       </div>
     </main>
   );
